@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/voice_recognition/css/voice_recognition.css"
-# app_include_js = "/assets/voice_recognition/js/voice_recognition.js"
+app_include_js = ["/assets/voice_recognition/js/voice_control.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/voice_recognition/css/voice_recognition.css"
