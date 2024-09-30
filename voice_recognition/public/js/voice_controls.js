@@ -39,7 +39,7 @@ $(document).ready(function() {
         console.log(transcript)
         outputDiv.text('You said: ' + transcript);
         frappe.call({
-            method: 'voice_recognition.voice_recognization.customization.speech_recognization.utility.identify_voice',
+            method: 'voice_recognition.voice_recognition.customization.speech_recognization.utility.identify_voice',
             args: {
                 speech_text: transcript,
                 url: window.location.href

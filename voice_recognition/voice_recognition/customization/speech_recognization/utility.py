@@ -149,10 +149,13 @@ def check_childtable(speech_text):
     return None
 
 def check_doctype_keyword(text):
-    pattern = r'\b(d(?:o|0)(?:c|g)?(?:\s*type|t(?:y)?pe)?)\b'
-    pattern = re.sub(pattern, 'doctype', text.lower())
+    pattern = r'\b(d(?:o|0)c\s*type|d(?:o|0)g\s*type|t(?:y)?pe)\b'
     
-    if re.search(pattern, text, re.IGNORECASE):
+    modified_text = re.sub(pattern, 'doctype', text.lower())
+    
+    pattern = re.sub(r'\b(doc\s*doctype)\b', 'doctype', modified_text)
+    
+    if "doctype" in pattern:
         return True
     else:
         return False
